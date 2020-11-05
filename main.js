@@ -56,7 +56,7 @@
         Object.keys(g_dqList).forEach(function(k){
             var key = g_dqList[k];
             var m = dqFile.match(new RegExp('(?<=#' + key + ')(.|\n)*?(?=#END)', 'g'));
-            g_dqObj[key] = m ? m.map(v=>"#" + key + '\n' + v + "#END").join('\n\n') : '';
+            g_dqObj[key] = m ? m.map(v => "#" + key + v + "#END").join('\n\n') : '';
         });
     }
     var g_editingKey = '';
