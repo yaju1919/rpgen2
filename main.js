@@ -1,6 +1,7 @@
 (function() {
     'use strict';
-    var g_dqFile = '', g_dqObj = {},
+    var loaded = false,
+        g_dqFile = '', g_dqObj = {},
         g_dqList = {
             "初期位置": "HERO",
             "BGM": "BGM",
@@ -45,6 +46,7 @@
         id: "load",
         title: "load",
         change: function(v){
+            if(!loaded) return;
             analysis(LZString.decompressFromEncodedURIComponent(v.replace(/^L1/,'')));
         }
     });
@@ -93,4 +95,5 @@
         fontSize: "2em",
     });
     h_ui.children().after("<br>");
+    loaded = true;
 })();
