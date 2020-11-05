@@ -58,9 +58,11 @@
             var m = dqFile.match(new RegExp('(?<=#' + key + ')(.|\n)*?(?=#END)', 'g'));
             g_dqObj[key] = m ? m.map(v => "#" + key + v + "#END").join('\n\n') : '';
         });
+        $("#dqSelect").val(g_dqList[Object.keys(g_dqList)]).trigger("change");
     }
     var g_editingKey = '';
     yaju1919.addSelect(tabA,{
+        id: "dqSelect",
         title: "編集する項目",
         list: g_dqList,
         change: function(key){
