@@ -24,7 +24,7 @@
         return $("<button>",{text: title}).appendTo(parentNode||h).click(func);
     }
     var h_ui = $("<div>").appendTo(h),
-        tabA = $("<div>").text("MAPデータを読み込ませてね"),
+        tabA = $("<div>"),
         tabB = $("<div>").text("outputを押してね"),
         tabC = $("<div>").text("outputを押してね");
     yaju1919.addTab(h,{
