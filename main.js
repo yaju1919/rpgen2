@@ -3,15 +3,15 @@
     var loaded = false,
         g_dqFile = '', g_dqObj = {},
         g_dqList = {
-            "初期位置": "HERO",
+            "初期座標": "HERO",
             "BGM": "BGM",
-            "背景": "BGIMG",
+            "壁紙": "BGIMG",
             "地面": "FLOOR",
             "物": "MAP",
             "人": "HUMAN",
             "宝箱": "TBOX",
-            "マップ移動": "MPOINT",
-            "しらべる": "SPOINT",
+            "移動地点": "MPOINT",
+            "調べる箇所": "SPOINT",
             "イベント": "EPOINT",
         };
     var h = $("<div>").appendTo($("body")).css({
