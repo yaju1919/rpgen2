@@ -78,7 +78,7 @@
         }
     });
     addBtn(h_ui,"output",function(){
-        var result = window.Bookmarklet.writeMapData(Object.keys(g_dqObj).join('\n\n'));
+        var result = window.Bookmarklet.writeMapData(Object.keys(g_dqObj).map(k=>g_dqObj[k]).join('\n\n'));
         yaju1919.addInputText(tabB.empty(),{
             value: result[0],
             textarea: true,
