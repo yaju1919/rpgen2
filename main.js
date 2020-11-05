@@ -19,7 +19,7 @@
     });
     $("<h1>").text("RPGEN edit tool 2").appendTo(h);
     $("<div>").text("MAPのURLバーにjを入力した後に、Bookmarkletを貼り付けてEnter押してください。").appendTo(h);
-    function addBtn(title, func, parentNode){
+    function addBtn(parentNode, title, func){
         return $("<button>",{text: title}).appendTo(parentNode||h).click(func);
     }
     var h_ui = $("<div>").appendTo(h),
