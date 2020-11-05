@@ -58,7 +58,7 @@
             var m = dqFile.match(new RegExp('(?<=#' + key + ')(.|\n)*?(?=#END)', 'g'));
             g_dqObj[key] = m ? m.map(v => "#" + key + v + "#END").join('\n\n') : '';
         });
-        $("#dqSelect").val(g_dqList[Object.keys(g_dqList)]).trigger("change");
+        $("#dqSelect").val(g_dqList[Object.keys(g_dqList)[0]]).trigger("change");
     }
     var g_editingKey = '';
     yaju1919.addSelect(tabA,{
